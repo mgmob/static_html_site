@@ -6,8 +6,9 @@
         function listClck()
 	{
 	        var sI1=document.Test2.Item.selectedIndex;
+		var sI2=document.Test2.Item.options[sI1].value
 		alert("OK!");
-		switch document.Test2.Item.options[sI1].value {	
+		switch sI2 {	
 		case "1": 
 			     document.getElementById("label1").innerHTML="Укажите общую площадь"; 
 			     break;
