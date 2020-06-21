@@ -3,12 +3,95 @@
 <head>
 <meta charset="UTF-8">
 	<script><!--
-        function btnClick2()
+        function listClck()
+	{
+	     switch document.Test2.Item.selectedIndex {	
+		case '1': 
+			     document.getElementById('label1').innerHTML='Укажите общую площадь'; 
+			     break;
+		case '2': 
+			     document.getElementById('label1').innerHTML='Укажите общую площадь'; 
+			     break;
+		case '3': 
+			     document.getElementById('label1').innerHTML='Укажите общую площадь'; 
+			     break;
+		case '4': 
+			     document.getElementById('label1').innerHTML='Укажите общую площадь'; 
+			     break;
+		case '5': 
+			     document.getElementById('label1').innerHTML='Укажите количество машино-мест'; 
+			     break;
+		case '6': 
+			     document.getElementById('label1').innerHTML='Укажите количество машино-мест'; 
+			     break;
+		case '7': 
+			     document.getElementById('label1').innerHTML='Укажите количество машино-мест'; 
+			     break;
+		case '8': 
+			     document.getElementById('label1').innerHTML='Укажите количество машино-мест'; 
+			     break;
+		case '9': 
+			     document.getElementById('label1').innerHTML='Укажите количество машино-мест'; 
+			     break;
+		case '10': 
+			     document.getElementById('label1').innerHTML='Укажите количество пассажиров'; 
+			     break;
+		case '11': 
+			     document.getElementById('label1').innerHTML='Укажите количество детей'; 
+			     break;
+		case '12': 
+			     document.getElementById('label1').innerHTML='Укажите количество учащихся'; 
+			     break;
+		case '13': 
+			     document.getElementById('label1').innerHTML='Укажите количество учащихся'; 
+			     break;
+		case '14': 
+			     document.getElementById('label1').innerHTML='Укажите количество мест'; 
+			     break;
+		case '15': 
+			     document.getElementById('label1').innerHTML='Укажите количество мест'; 
+			     break;
+		case '16': 
+			     document.getElementById('label1').innerHTML='Укажите количество мест'; 
+			     break;
+		case '17': 
+			     document.getElementById('label1').innerHTML='Укажите общую площадь'; 
+			     break;
+		case '18': 
+			     document.getElementById('label1').innerHTML='Укажите общую площадь'; 
+			     break;
+		case '19': 
+			     document.getElementById('label1').innerHTML='Укажите общую площадь'; 
+			     break;
+		case '20': 
+			     document.getElementById('label1').innerHTML='Укажите количество мест'; 
+			     break;
+		case '21': 
+			     document.getElementById('label1').innerHTML='Укажите общую площадь'; 
+			     break;
+		case '22': 
+			     document.getElementById('label1').innerHTML='Укажите количество мест'; 
+			     break;
+		case '23': 
+			     document.getElementById('label1').innerHTML='Укажите количество мест'; 
+			     break;
+		case '24': 
+			     document.getElementById('label1').innerHTML='Укажите количество мест'; 
+			     break;
+		case '25': 
+			     document.getElementById('label1').innerHTML='Укажите количество участников'; 
+			     break;
+	     }
+	}
+		
+	function btnClick2()
         {
-           
+           //1 - меняем подпись к полю, делаем поле видимым
+	   
+	   //2 - 
 	    var sI=document.Test2.Item.selectedIndex;
 	   // alert(sI);
-	    document.Test2.btn1.value="djhfjh"
+	    //document.Test2.btn1.value="djhfjh"
             var Txt="";
             Txt="Предложено "+document.Test2.Item.length+" объектов"+
                 "\nВыбран "+document.Test2.Item.options[sI].text+
@@ -17,7 +100,7 @@
             if(document.Test2.Item.options[sI].defaultSelected)
                 {Txt+="\nЭтот объект выбирается по умолчанию";}
                 alert(Txt);
-		document.getElementById("label1").innerHTML=document.Test2.Item.options[sI].text;
+		
             }
         //-->
     	</script>
@@ -27,7 +110,7 @@
     <h1>Расчет тарифа ТКО для юридических лиц онлайн</h1>
     
 <FORM NAME="Test2">
-    <SELECT NAME="Item" SIZE=5>
+    <SELECT NAME="Item" SIZE=5 onClick="listClck();">
          <OPTION VALUE ="1">Административные, офисные учреждения
 	 <OPTION VALUE ="2">магазины (продовольственные, смешанных товаров, промтоварные, универсальные магазины)
 	 <OPTION VALUE ="3">нестационарные торговые объекты
@@ -54,9 +137,11 @@
 	 <OPTION VALUE ="24">Кладбища
 	 <OPTION VALUE ="25">Садоводческие некоммерческие товарищества
 		 </SELECT>
-    <INPUT name="btn1" TYPE="button" VALUE="Посмотрим"
-           onClick="btnClick2();">
+   
 	    <div id="label1">test</div>
+	    <INPUT type="number" name="v1" value="0" step="0.1">
+	 <INPUT name="btn1" TYPE="button" VALUE="Посмотрим"
+           onClick="btnClick2();">
 </FORM>
     
   </body>
