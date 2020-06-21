@@ -10,79 +10,79 @@
      // alert(sI2)
       switch (Number(sI2)) {	
 		    case 1: 
-			     document.getElementById("label1").innerHTML="Укажите общую площадь"; 
+			     document.getElementById("label1").innerHTML="Укажите общую площадь:"; 
 			     break;
            	case 2: 
-			     document.getElementById("label1").innerHTML="Укажите общую площадь"; 
+			     document.getElementById("label1").innerHTML="Укажите общую площадь:"; 
 			     break;
     		case 3: 
-    			     document.getElementById("label1").innerHTML="Укажите общую площадь"; 
+    			     document.getElementById("label1").innerHTML="Укажите общую площадь:"; 
     			     break;
     		case 4: 
-    			     document.getElementById("label1").innerHTML="Укажите общую площадь"; 
+    			     document.getElementById("label1").innerHTML="Укажите общую площадь:"; 
     			     break;
     		case 5: 
-    			     document.getElementById("label1").innerHTML="Укажите количество машино-мест"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество машино-мест:"; 
     			     break;
     		case 6: 
-    			     document.getElementById("label1").innerHTML="Укажите количество машино-мест"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество машино-мест:"; 
     			     break;
     		case 7: 
-    			     document.getElementById("label1").innerHTML="Укажите количество машино-мест"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество машино-мест:"; 
     			     break;
     		case 8: 
-    			     document.getElementById("label1").innerHTML="Укажите количество машино-мест"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество машино-мест:"; 
     			     break;
     		case 9: 
-    			     document.getElementById("label1").innerHTML="Укажите количество машино-мест"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество машино-мест:"; 
     			     break;
     		case 10: 
-    			     document.getElementById("label1").innerHTML="Укажите количество пассажиров"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество пассажиров:"; 
     			     break;
     		case 11: 
-    			     document.getElementById("label1").innerHTML="Укажите количество детей"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество детей:"; 
     			     break;
     		case 12: 
-    			     document.getElementById("label1").innerHTML="Укажите количество учащихся"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество учащихся:"; 
     			     break;
     		case 13: 
-    			     document.getElementById("label1").innerHTML="Укажите количество учащихся"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество учащихся:"; 
     			     break;
     		case 14: 
-    			     document.getElementById("label1").innerHTML="Укажите количество мест"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество мест:"; 
     			     break;
     		case 15: 
-    			     document.getElementById("label1").innerHTML="Укажите количество мест"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество мест:"; 
     			     break;
     		case 16: 
-    			     document.getElementById("label1").innerHTML="Укажите количество мест"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество мест:"; 
     			     break;
     		case 17: 
-    			     document.getElementById("label1").innerHTML="Укажите общую площадь"; 
+    			     document.getElementById("label1").innerHTML="Укажите общую площадь:"; 
     			     break;
     		case 18: 
-    			     document.getElementById("label1").innerHTML="Укажите общую площадь"; 
+    			     document.getElementById("label1").innerHTML="Укажите общую площадь:"; 
     			     break;
     		case 19: 
-    			     document.getElementById("label1").innerHTML="Укажите общую площадь"; 
+    			     document.getElementById("label1").innerHTML="Укажите общую площадь:"; 
     			     break;
     		case 20: 
-    			     document.getElementById("label1").innerHTML="Укажите количество мест"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество мест:"; 
     			     break;
     		case 21: 
-    			     document.getElementById("label1").innerHTML="Укажите общую площадь"; 
+    			     document.getElementById("label1").innerHTML="Укажите общую площадь:"; 
     			     break;
     		case 22: 
-    			     document.getElementById("label1").innerHTML="Укажите количество мест"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество мест:"; 
     			     break;
     		case 23: 
-    			     document.getElementById("label1").innerHTML="Укажите количество мест"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество мест:"; 
     			     break;
     		case 24: 
-    			     document.getElementById("label1").innerHTML="Укажите количество мест"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество мест:"; 
     			     break;
     		case 25: 
-    			     document.getElementById("label1").innerHTML="Укажите количество участников"; 
+    			     document.getElementById("label1").innerHTML="Укажите количество участников:"; 
     			     break;
       }
      
@@ -115,6 +115,7 @@
     <h1>Расчет тарифа ТКО для юридических лиц онлайн</h1>
     
 <FORM NAME="Test2">
+	<div id="label0">Выберите тип организации:</div>
     <SELECT NAME="Item" SIZE=5 onchange="listClck();">
          <OPTION VALUE ="1">Административные, офисные учреждения
       	 <OPTION VALUE ="2">магазины (продовольственные, смешанных товаров, промтоварные, универсальные магазины)
@@ -145,9 +146,9 @@
    
 	    <div id="label1"></div>
 	    <INPUT type="number" name="v1" value="0">
-      <div id="label2">Укажите период (месяцев)</div>
+      <div id="label2">Укажите период (месяцев):</div>
 	    <INPUT type="number" name="v2" value="0" step="1">
-	 <p><INPUT name="btn1" TYPE="button" VALUE="Рассчитать"
+	 <p><INPUT name="btn1" TYPE="button" VALUE="Рассчитать тариф"
            onClick="btnClick2();"></p>
 </FORM>
     <div id="norm"></div>
