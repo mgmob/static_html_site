@@ -2,6 +2,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
+	<script><!--
+        function btnClick2()
+        {
+            var sI=document.Test2.Item.selectedIndex;
+            var Txt="";
+            Txt="Предложено "+document.Test2.Item.length+" напитков"+
+                "\nВыбран "+document.Test2.Item.options[sI].text+
+                " (value= "+document.Test2.Item.options[sI].value+
+                ", index= "+document.Test2.Item.options[sI].index+")";
+            if(document.Test2.Item.options[sI].defaultSelected)
+                {Txt+="\nЭтот напиток выбирается по умолчанию";}
+                alert(Txt);
+            }
+        //-->
+    	</script>
 <title>Калькулятор тарифа ТКО</title>
 </head>
   <body>
@@ -20,102 +35,19 @@
      <p><button>Расчет</button></p>
   </form>
   
-<style>
-    .btn {
-        width: 60px;
-        height: 60px;
-        background: #fc0;
-        display: inline-block;
-        text-align: center;
-        line-height: 60px;
-        user-select: none;
-    }
- 
-    .btn:hover {
-        background: #f70;
-        color: #fff;
-    }
- 
-    #calc-wrap {
-        padding: 10px;
-        width: 100%;
-        text-align: center;
-        background: #eee;
-    }
- 
-    #calc {
-        width: 240px;
-        display: inline-block;
-    }
- 
-    #inputVal {
-        width: 100%;
-        border: 0;
-        font-size: 16px;
-        resize: vertical;
-    }
-</style>	  
-	  
-  <script>
-// код начнёт выполняться после загрузки страницы
-// когда окно загрузится, сработает метод window.onLoad
-window.addEventListener('load', function OnWindowLoaded() {
-    // набор кнопок
-    var signs = [
-        '1', '2', '3', '+',
-        '4', '5', '6', '-',
-        '7', '8', '9', '/',
-        '0', '=', '.', 'c'
-    ];
- 
-    // форма калькулятора
-    var calc = document.getElementById('calc');
- 
-    // текстовое поле с математическим выражением
-    var textArea = document.getElementById('inputVal');
- 
-    // Добавление кнопок к форме калькулятора
-    signs.forEach(function (sign) {
-        var signElement = document.createElement('div');
-        signElement.className = 'btn';
-        signElement.innerHTML = sign;
-        calc.appendChild(signElement);
-    });
- 
-    // проходит по всем кнопкам калькулятора
-    // добавляет обработчик на клик
-    document.querySelectorAll('#calc-wrap .btn').forEach(function (button) {
-        // Добавляем действие, выполняемое при клике на любую кнопку
-        button.addEventListener('click', onButtonClick);
-    });
- 
-    // функция клика по кнопке калькулятора
-    function onButtonClick(e) {
-        // e - MouseEvent (содержит информацию о клике)
-        if (e.target.innerHTML === 'c') {
-            // Если нажата кнопка "с", то стирает все из текстового поля
-            textArea.innerHTML = '0';
-        } else if (e.target.innerHTML === '=') {
-            // Если нажата кнопка "=", то, приведя выражение
-            // в текстовом поле к javascript, вычислить значение
-            textArea.innerHTML = eval(textArea.innerHTML);
-        } else if (textArea.innerHTML === '0') {
-            // Если textarea содержит только "0", то
-            // стереть "0" и записать
-            // значения кнопки в текстовое поле
-            textArea.innerHTML = e.target.innerHTML;
-        } else {
-            // Добавление значения кнопки в текстовое поле
-            textArea.innerHTML += e.target.innerHTML;
-        }
-    }
-});
-</script>
-<div id="calc-wrap">
-    <div id="calc">
-        <textarea id=inputVal>0</textarea>
-    </div>
-</div>
+<FORM NAME="Test2">
+    <SELECT NAME="Item" SIZE=5>
+        <OPTION VALUE="tea" SELECTED>Чай
+        <OPTION VALUE ="coffee">Кофе
+        <OPTION VALUE ="milk">Молоко
+        <OPTION VALUE ="cocoa">Какао
+        <OPTION VALUE ="juice">Сок
+    </SELECT>
+    <INPUT TYPE="button" VALUE="Пусть кофе"
+           onClick="Test2.Item.options[1].selected=true;">
+    <INPUT TYPE="button" VALUE="Посмотрим"
+           onClick="btnClick2();">
+</FORM>
     
   </body>
 </html>
