@@ -8,6 +8,7 @@
            
 	    var sI=document.Test2.Item.selectedIndex;
 	   // alert(sI);
+	    document.Test2.btn1.text="djhfjh"
             var Txt="";
             Txt="Предложено "+document.Test2.Item.length+" объектов"+
                 "\nВыбран "+document.Test2.Item.options[sI].text+
@@ -52,7 +53,7 @@
 	 <OPTION VALUE ="24">Кладбища
 	 <OPTION VALUE ="25">Садоводческие некоммерческие товарищества
 		 </SELECT>
-    <INPUT TYPE="button" VALUE="Посмотрим"
+    <INPUT name="btn1" TYPE="button" VALUE="Посмотрим"
            onClick="btnClick2();">
 </FORM>
     
