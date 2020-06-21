@@ -5,14 +5,42 @@
 	<script><!--
         function btnClick2()
         {
-            var sI=document.Test2.Item.selectedIndex;
+            var arrObjects = []; // объявление массива
+	    	
+		arrObjects[1] = { id: "1", name: "Административные, офисные учреждения", mesure: "1 кв. метр общей площади", value: "2.32" }
+		arrObjects[2] = { id: "2", name: "магазины (продовольственные, смешанных товаров, промтоварные, универсальные магазины)", mesure: "1 кв. метр общей площади", value: "25.17" }
+		arrObjects[3] = { id: "3", name: "нестационарные торговые объекты", mesure: "1 кв. метр общей площади", value: "17.47" }
+		arrObjects[4] = { id: "4", name: "рынки промтоварные, торговые центры", mesure: "1 кв. метр общей площади", value: "2.25" }
+		arrObjects[5] = { id: "5", name: "автомастерские, шиномонтажные мастерские, станции технического обслуживания", mesure: "1 машино-место", value: "750.97" }
+		arrObjects[6] = { id: "6", name: "автозаправочные станции", mesure: "1 машино-место", value: "541.62" }
+		arrObjects[7] = { id: "7", name: "автотранспортные предприятия", mesure: "1 машино-место", value: "121.84" }
+		arrObjects[8] = { id: "8", name: "гаражи, парковки закрытого типа, автостоянки", mesure: "1 машино-место", value: "37.62" }
+		arrObjects[9] = { id: "9", name: "автомойки", mesure: "1 машино-место", value: "378.25" }
+		arrObjects[10] = { id: "10", name: "железнодорожные и автовокзалы, аэропорты, речные порты", mesure: "1 пассажир", value: "15.13" }
+		arrObjects[11] = { id: "11", name: "дошкольное образовательное учреждение", mesure: "1 ребенок", value: "31.16" }
+		arrObjects[12] = { id: "12", name: "общеобразовательное учреждение", mesure: "1 учащийся", value: "12.96" }
+		arrObjects[13] = { id: "13", name: "Иные учреждения, осуществляющие образовательный процесс", mesure: "1 учащийся", value: "2.2" }
+		arrObjects[14] = { id: "14", name: "клубы, кинотеатры, дома и дворцы культуры", mesure: "1 место", value: "41.19" }
+		arrObjects[15] = { id: "15", name: "театры, цирки, концертные залы", mesure: "1 место", value: "11.18" }
+		arrObjects[16] = { id: "16", name: "библиотеки", mesure: "1 место", value: "19.91" }
+		arrObjects[17] = { id: "17", name: "архивы", mesure: "1 кв. метр общей площади", value: "33.7" }
+		arrObjects[18] = { id: "18", name: "выставочные залы, музеи", mesure: "1 кв. метр общей площади", value: "4.63" }
+		arrObjects[19] = { id: "19", name: "спортивные клубы, центры, комплексы", mesure: "1 кв. метр общей площади", value: "3.03" }
+		arrObjects[20] = { id: "20", name: "Предприятия общественного питания", mesure: "1 место", value: "183.52" }
+		arrObjects[21] = { id: "21", name: "мастерские и ателье", mesure: "1 кв. метр общей площади", value: "4.26" }
+		arrObjects[22] = { id: "22", name: "парикмахерские, косметические салоны, салоны красоты", mesure: "1 место", value: "90.08" }
+		arrObjects[23] = { id: "23", name: "гостиницы, пансионаты, дома отдыха, туристические базы", mesure: "1 место", value: "304.05" }
+		arrObjects[24] = { id: "24", name: "Кладбища", mesure: "1 место", value: "1.9" }
+		arrObjects[25] = { id: "25", name: "Садоводческие некоммерческие товарищества", mesure: "1 участник (член)", value: "160.62" }
+
+	    var sI=document.Test2.Item.selectedIndex;
             var Txt="";
-            Txt="Предложено "+document.Test2.Item.length+" напитков"+
+            Txt="Предложено "+document.Test2.Item.length+" объектов"+
                 "\nВыбран "+document.Test2.Item.options[sI].text+
                 " (value= "+document.Test2.Item.options[sI].value+
                 ", index= "+document.Test2.Item.options[sI].index+")";
             if(document.Test2.Item.options[sI].defaultSelected)
-                {Txt+="\nЭтот напиток выбирается по умолчанию";}
+                {Txt+="\nЭтот объект выбирается по умолчанию";}
                 alert(Txt);
             }
         //-->
@@ -36,21 +64,34 @@
   </form>
   
 <FORM NAME="Test2">
-    <SELECT NAME="Item" SIZE=5>
-        <OPTION VALUE="tea" SELECTED>Чай
-        <OPTION VALUE ="coffee">Кофе
-        <OPTION VALUE ="milk">Молоко
-        <OPTION VALUE ="cocoa">Какао
-        <OPTION VALUE ="juice1">Сок1
-	<OPTION VALUE ="juice2">Сок2
-	<OPTION VALUE ="juice3">Сок3
-	<OPTION VALUE ="juice4">Сок4
-	<OPTION VALUE ="juice5">Сок5
-	<OPTION VALUE ="juice6">Сок6
-	<OPTION VALUE ="juice7">Сок7
-	<OPTION VALUE ="juice8">Сок8
+    <SELECT NAME="ObjTKO" SIZE=5>
+         <OPTION VALUE ="1">Административные, офисные учреждения
+	 <OPTION VALUE ="2">магазины (продовольственные, смешанных товаров, промтоварные, универсальные магазины)
+	 <OPTION VALUE ="3">нестационарные торговые объекты
+	 <OPTION VALUE ="4">рынки промтоварные, торговые центры
+	 <OPTION VALUE ="5">автомастерские, шиномонтажные мастерские, станции технического обслуживания
+	 <OPTION VALUE ="6">автозаправочные станции
+	 <OPTION VALUE ="7">автотранспортные предприятия
+	 <OPTION VALUE ="8">гаражи, парковки закрытого типа, автостоянки
+	 <OPTION VALUE ="9">автомойки
+	 <OPTION VALUE ="10">железнодорожные и автовокзалы, аэропорты, речные порты
+	 <OPTION VALUE ="11">дошкольное образовательное учреждение
+	 <OPTION VALUE ="12">общеобразовательное учреждение
+	 <OPTION VALUE ="13">Иные учреждения, осуществляющие образовательный процесс
+	 <OPTION VALUE ="14">клубы, кинотеатры, дома и дворцы культуры
+	 <OPTION VALUE ="15">театры, цирки, концертные залы
+	 <OPTION VALUE ="16">библиотеки
+	 <OPTION VALUE ="17">архивы
+	 <OPTION VALUE ="18">выставочные залы, музеи
+	 <OPTION VALUE ="19">спортивные клубы, центры, комплексы
+	 <OPTION VALUE ="20">Предприятия общественного питания
+	 <OPTION VALUE ="21">мастерские и ателье
+	 <OPTION VALUE ="22">парикмахерские, косметические салоны, салоны красоты
+	 <OPTION VALUE ="23">гостиницы, пансионаты, дома отдыха, туристические базы
+	 <OPTION VALUE ="24">Кладбища
+	 <OPTION VALUE ="25">Садоводческие некоммерческие товарищества
     </SELECT>
-    <INPUT TYPE="button" VALUE="Пусть кофе"
+   
            onClick="Test2.Item.options[1].selected=true;">
     <INPUT TYPE="button" VALUE="Посмотрим"
            onClick="btnClick2();">
