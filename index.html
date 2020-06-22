@@ -6,7 +6,16 @@
 <link href="jquery.formstyler.theme.css" rel="stylesheet" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="jquery.formstyler.min.js"></script>
-	<script><!--
+<script>
+	(function($) {
+	$(function() {
+		$('input, select').styler({
+			selectSearch: true,
+		});
+	});
+	})(jQuery);
+</script>
+<script><!--
     function listClck(){
       //alert("OK!");
       var sI1=document.Test2.Item.selectedIndex;
