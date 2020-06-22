@@ -34,245 +34,86 @@
 </head>
   <body>
 	  
-	  <div class="container">
+<div class="container">
   <div class="py-5 text-center">
     <h2>Калькулятор тарифа ТКО</h2>
     <p class="lead">Рассчитайте тариф на ТКО</p>
   </div>
-
-  <div class="row">
-
-    <div class="col-md-12 order-md-1">
-      <h4 class="mb-3">Расчет тарифа для юридических лиц</h4>
-      <form name="Test2" class="needs-validation" novalidate>
-        <div class="row">
-          <div class="col-md-12 mb-3">
-            <label>Категория организации</label>
-            <SELECT class="form-control" NAME="Item" SIZE=5 onchange="listClck();">
-            <OPTION VALUE ="1">Административные, офисные учреждения</option>
-            <OPTION VALUE ="2">Магазины (продовольственные, смешанных товаров, промтоварные, универсальные магазины)</option>
-            <OPTION VALUE ="3">Нестационарные торговые объекты</option>
-            <OPTION VALUE ="4">Рынки промтоварные, торговые центры</option>
-            <OPTION VALUE ="5">Автомастерские, шиномонтажные мастерские, станции технического обслуживания</option>
-            <OPTION VALUE ="6">Автозаправочные станции</option>
-            <OPTION VALUE ="7">Автотранспортные предприятия</option>
-            <OPTION VALUE ="8">Гаражи, парковки закрытого типа, автостоянки</option>
-            <OPTION VALUE ="9">Автомойки</option>
-            <OPTION VALUE ="10">Железнодорожные и автовокзалы, аэропорты, речные порты</option>
-            <OPTION VALUE ="11">Дошкольное образовательное учреждение</option>
-            <OPTION VALUE ="12">Общеобразовательное учреждение</option>
-            <OPTION VALUE ="13">Иные учреждения, осуществляющие образовательный процесс</option>
-            <OPTION VALUE ="14">Клубы, кинотеатры, дома и дворцы культуры</option>
-            <OPTION VALUE ="15">Театры, цирки, концертные залы</option>
-            <OPTION VALUE ="16">Библиотеки</option>
-            <OPTION VALUE ="17">Архивы</option>
-            <OPTION VALUE ="18">Выставочные залы, музеи</option>
-            <OPTION VALUE ="19">Спортивные клубы, центры, комплексы</option>
-            <OPTION VALUE ="20">Предприятия общественного питания</option>
-            <OPTION VALUE ="21">Мастерские и ателье</option>
-            <OPTION VALUE ="22">Парикмахерские, косметические салоны, салоны красоты</option>
-            <OPTION VALUE ="23">Гостиницы, пансионаты, дома отдыха, туристические базы</option>
-            <OPTION VALUE ="24">Кладбища</option>
-            <OPTION VALUE ="25">Садоводческие некоммерческие товарищества</option>
-          </SELECT>
-
-          </div>
-            <label class="col-md-6 mb-3">
-            <label id="label1">Укажите...</label>
-            <input type="text" class="form-control" name="v1" placeholder="" value="" required>
-            <Label id="label2">Укажите период (месяцев):</label>
-            <INPUT class="form-control" type="text" name="v2" value="0">
-            <hr class="mb-4">
-            <INPUT class="btn btn-success" name="btn1" TYPE="button" VALUE="Рассчитать тариф" onClick="btnClick2();">
-              <hr class="mb-4">
-            <div class="col-md-6 mb-3">
-              <div class="col-md-6 mb-3" id="norm"></div>
-              <div class="col-md-6 mb-3" id="result1"></div>
-              <div class="col-md-6 mb-3" id="result2"></div>
-            </div>
-        </div>
-
-
-        <div class="mb-3">
-          <label for="username">Username</label>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">@</span>
-            </div>
-            <input type="text" class="form-control" id="username" placeholder="Username" required>
-            <div class="invalid-feedback" style="width: 100%;">
-              Your username is required.
-            </div>
-          </div>
-        </div>
-
-        <div class="mb-3">
-          <label for="email">Email <span class="text-muted">(Optional)</span></label>
-          <input type="email" class="form-control" id="email" placeholder="you@example.com">
-          <div class="invalid-feedback">
-            Please enter a valid email address for shipping updates.
-          </div>
-        </div>
-
-        <div class="mb-3">
-          <label for="address">Address</label>
-          <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
-          <div class="invalid-feedback">
-            Please enter your shipping address.
-          </div>
-        </div>
-
-        <div class="mb-3">
-          <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-          <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
-        </div>
-
-        <div class="row">
-          <div class="col-md-5 mb-3">
-            <label for="country">Country</label>
-            <select class="custom-select d-block w-100" id="country" required>
-              <option value="">Choose...</option>
-              <option>United States</option>
-            </select>
-            <div class="invalid-feedback">
-              Please select a valid country.
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <label for="state">State</label>
-            <select class="custom-select d-block w-100" id="state" required>
-              <option value="">Choose...</option>
-              <option>California</option>
-            </select>
-            <div class="invalid-feedback">
-              Please provide a valid state.
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="zip">Zip</label>
-            <input type="text" class="form-control" id="zip" placeholder="" required>
-            <div class="invalid-feedback">
-              Zip code required.
-            </div>
-          </div>
-        </div>
-        <hr class="mb-4">
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="same-address">
-          <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
-        </div>
-        <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="save-info">
-          <label class="custom-control-label" for="save-info">Save this information for next time</label>
-        </div>
-        <hr class="mb-4">
-
-        <h4 class="mb-3">Payment</h4>
-
-        <div class="d-block my-3">
-          <div class="custom-control custom-radio">
-            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
-            <label class="custom-control-label" for="credit">Credit card</label>
-          </div>
-          <div class="custom-control custom-radio">
-            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
-            <label class="custom-control-label" for="debit">Debit card</label>
-          </div>
-          <div class="custom-control custom-radio">
-            <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-            <label class="custom-control-label" for="paypal">PayPal</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="cc-name">Name on card</label>
-            <input type="text" class="form-control" id="cc-name" placeholder="" required>
-            <small class="text-muted">Full name as displayed on card</small>
-            <div class="invalid-feedback">
-              Name on card is required
-            </div>
-          </div>
-          <div class="col-md-6 mb-3">
-            <label for="cc-number">Credit card number</label>
-            <input type="text" class="form-control" id="cc-number" placeholder="" required>
-            <div class="invalid-feedback">
-              Credit card number is required
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3 mb-3">
-            <label for="cc-expiration">Expiration</label>
-            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-            <div class="invalid-feedback">
-              Expiration date required
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="cc-cvv">CVV</label>
-            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-            <div class="invalid-feedback">
-              Security code required
-            </div>
-          </div>
-        </div>
-        <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
-      </form>
+<form name="Test2">
+  <div class="row" id="r1">
+    <div class="col-md-12 mb-3">
+      <h4 class="mb-3 text-center">Расчет тарифа для юридических лиц</h4>
+      <div class="mb-3">
+        <label>Категория организации</label>
+        <SELECT class="form-control" NAME="Item" SIZE=5 onchange="listClck();">
+          <OPTION VALUE ="1">Административные, офисные учреждения</option>
+          <OPTION VALUE ="2">Магазины (продовольственные, смешанных товаров, промтоварные, универсальные магазины)</option>
+          <OPTION VALUE ="3">Нестационарные торговые объекты</option>
+          <OPTION VALUE ="4">Рынки промтоварные, торговые центры</option>
+          <OPTION VALUE ="5">Автомастерские, шиномонтажные мастерские, станции технического обслуживания</option>
+          <OPTION VALUE ="6">Автозаправочные станции</option>
+          <OPTION VALUE ="7">Автотранспортные предприятия</option>
+          <OPTION VALUE ="8">Гаражи, парковки закрытого типа, автостоянки</option>
+          <OPTION VALUE ="9">Автомойки</option>
+          <OPTION VALUE ="10">Железнодорожные и автовокзалы, аэропорты, речные порты</option>
+          <OPTION VALUE ="11">Дошкольное образовательное учреждение</option>
+          <OPTION VALUE ="12">Общеобразовательное учреждение</option>
+          <OPTION VALUE ="13">Иные учреждения, осуществляющие образовательный процесс</option>
+          <OPTION VALUE ="14">Клубы, кинотеатры, дома и дворцы культуры</option>
+          <OPTION VALUE ="15">Театры, цирки, концертные залы</option>
+          <OPTION VALUE ="16">Библиотеки</option>
+          <OPTION VALUE ="17">Архивы</option>
+          <OPTION VALUE ="18">Выставочные залы, музеи</option>
+          <OPTION VALUE ="19">Спортивные клубы, центры, комплексы</option>
+          <OPTION VALUE ="20">Предприятия общественного питания</option>
+          <OPTION VALUE ="21">Мастерские и ателье</option>
+          <OPTION VALUE ="22">Парикмахерские, косметические салоны, салоны красоты</option>
+          <OPTION VALUE ="23">Гостиницы, пансионаты, дома отдыха, туристические базы</option>
+          <OPTION VALUE ="24">Кладбища</option>
+          <OPTION VALUE ="25">Садоводческие некоммерческие товарищества</option>
+        </SELECT>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="r2">
+    <div class="col-md-6 mb-3" id="norm_col">
+      <h5 class="mb-3 text-center">Расчет по нормативу</h5>
+      <div class="mb-3">
+        <label id="label1">Укажите...</label>
+        <input  type="text" class="form-control mb-3" name="v1" placeholder="" value="">
+        <Label id="label2">Укажите период (месяцев):</label>
+        <INPUT class="form-control mb-3" type="text" name="v2" value="0">
+        <div class="mb-3 text-center"><INPUT class="btn btn-success" name="btn1" TYPE="button" VALUE="Рассчитать тариф" onClick="btnClick2();"></div>
+      </div>
+      <div class="mb-3">
+        <div class="mb-3" id="norm">Норматив:</div>
+        <div class="mb-3" id="result1">Тариф за весь период:</div>
+        <div class="mb-3" id="result2">Тариф по месяцам:</div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3" id="cont_col">
+      <h5 class="mb-3 text-center">Расчет по контейнерам</h5>
+      <div class="mb-3">
+        <label id="label-k1">Количество контейнеров</label>
+        <input  type="text" class="form-control mb-3" name="k1" placeholder="" value="">
+        <label id="label-k2">Объем контейнера</label>
+        <input  type="text" class="form-control mb-3" name="k2" placeholder="" value="">
+        <label id="label-k3">Периодичность вывоза (в месяц)</label>
+        <input  type="text" class="form-control mb-3" name="k3" placeholder="" value="">
+        <div class="mb-3 text-center"><INPUT class="btn btn-success" name="btn3" TYPE="button" VALUE="Рассчитать тариф" onClick="btnClick3();"></div>
+      </div>
+      <div class="mb-3">
+        <div class="mb-3" id="normk">Норматив:</div>
+        <div class="mb-3" id="resultk1">Тариф за весь период:</div>
+        <div class="mb-3" id="resultk2">Тариф по месяцам:</div>
+      </div>
     </div>
   </div>
 
-  <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy; 2017-2020 Company Name</p>
-    <ul class="list-inline">
-      <li class="list-inline-item"><a href="#">Privacy</a></li>
-      <li class="list-inline-item"><a href="#">Terms</a></li>
-      <li class="list-inline-item"><a href="#">Support</a></li>
-    </ul>
-  </footer>
-</div>
-    <h1>Расчет тарифа ТКО для юридических лиц онлайн</h1>
-    
-<FORM NAME="Test22">
-<div class="form-group" id="label0">
-		<h3>Выберите тип организации:</h3>
-    <SELECT class="form-control" NAME="Item-" SIZE=5 onchange="listClck();">
-         <OPTION VALUE ="1">Административные, офисные учреждения</option>
-      	 <OPTION VALUE ="2">магазины (продовольственные, смешанных товаров, промтоварные, универсальные магазины)</option>
-      	 <OPTION VALUE ="3">нестационарные торговые объекты</option>
-      	 <OPTION VALUE ="4">рынки промтоварные, торговые центры</option>
-      	 <OPTION VALUE ="5">автомастерские, шиномонтажные мастерские, станции технического обслуживания</option>
-      	 <OPTION VALUE ="6">автозаправочные станции</option>
-      	 <OPTION VALUE ="7">автотранспортные предприятия</option>
-      	 <OPTION VALUE ="8">гаражи, парковки закрытого типа, автостоянки</option>
-      	 <OPTION VALUE ="9">автомойки</option>
-      	 <OPTION VALUE ="10">железнодорожные и автовокзалы, аэропорты, речные порты</option>
-      	 <OPTION VALUE ="11">дошкольное образовательное учреждение</option>
-      	 <OPTION VALUE ="12">общеобразовательное учреждение</option>
-      	 <OPTION VALUE ="13">Иные учреждения, осуществляющие образовательный процесс</option>
-      	 <OPTION VALUE ="14">клубы, кинотеатры, дома и дворцы культуры</option>
-      	 <OPTION VALUE ="15">театры, цирки, концертные залы</option>
-      	 <OPTION VALUE ="16">библиотеки</option>
-      	 <OPTION VALUE ="17">архивы</option>
-      	 <OPTION VALUE ="18">выставочные залы, музеи</option>
-      	 <OPTION VALUE ="19">спортивные клубы, центры, комплексы</option>
-      	 <OPTION VALUE ="20">Предприятия общественного питания</option>
-      	 <OPTION VALUE ="21">мастерские и ателье</option>
-      	 <OPTION VALUE ="22">парикмахерские, косметические салоны, салоны красоты</option>
-      	 <OPTION VALUE ="23">гостиницы, пансионаты, дома отдыха, туристические базы</option>
-      	 <OPTION VALUE ="24">Кладбища</option>
-      	 <OPTION VALUE ="25">Садоводческие некоммерческие товарищества</option>
-	</SELECT>
-	
+</form>
+
 </div>
 
-	<div class="section" id="label10"></div>
-	<div class="section" ><INPUT class="form-control" type="text" name="v10" value="0"></div>
-        <div class="section"  id="label2">Укажите период (месяцев):</div>
-	<div class="section" ><INPUT class="form-control" type="text" name="v20" value="0"></div>
-	<div class="section" ><p><INPUT class="btn btn-success" name="btn1" TYPE="button" VALUE="Рассчитать тариф" onClick="btnClick2();"></p></div>
-
-</FORM>
 
   </body>
 </html>
