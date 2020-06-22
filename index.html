@@ -30,19 +30,19 @@
 	
 <script src="count.js"></script>
 
-<title>Калькулятор тарифа ТКО</title>
+<title>Калькулятор ТКО</title>
 </head>
   <body>
 	  
 <div class="container">
   <div class="py-5 text-center">
-    <h2>Калькулятор тарифа ТКО</h2>
-    <p class="lead">Рассчитайте тариф на ТКО</p>
+    <h2>Калькулятор ТКО</h2>
+    <p class="lead">В настоящее время расчет представлен по Тюменской области</p>
   </div>
 <form name="Test2">
   <div class="row" id="r1">
     <div class="col-md-12 mb-3">
-      <h4 class="mb-3 text-center">Расчет тарифа для юридических лиц</h4>
+      <h4 class="mb-3 text-center">Расчет для юридических лиц</h4>
       <div class="mb-3">
         <label>Категория организации</label>
         <SELECT class="form-control" NAME="Item" SIZE=5 onchange="listClck();">
@@ -77,22 +77,20 @@
   </div>
   <div class="row" id="r2">
     <div class="col-md-6 mb-3" id="norm_col">
-      <h5 class="mb-3 text-center">Расчет по нормативу</h5>
+      <h5 class="mb-3 text-center">Расчет по нормативам накопления ТКО</h5>
       <div class="mb-3">
         <label id="label1">Укажите...</label>
-        <input  type="text" class="form-control mb-3" name="v1" placeholder="" value="">
-        <Label id="label2">Укажите период (месяцев):</label>
-        <INPUT class="form-control mb-3" type="text" name="v2" value="0">
-        <div class="mb-3 text-center"><INPUT class="btn btn-success" name="btn1" TYPE="button" VALUE="Рассчитать тариф" onClick="btnClick2();"></div>
+        <input  type="number" class="form-control mb-3" name="v1" placeholder="" value="">
+        <div class="mb-3 text-center"><INPUT class="btn btn-success" name="btn1" TYPE="button" VALUE="Рассчитать платеж" onClick="btnClick2();"></div>
       </div>
       <div class="mb-3">
-        <div class="mb-3" id="norm">Норматив:</div>
-        <div class="mb-3" id="result1">Тариф за весь период:</div>
-        <div class="mb-3" id="result2">Тариф по месяцам:</div>
+        <div class="mb-3" id="norm">Тариф: 5 895,11 руб/тонна</div>
+        <div class="mb-3" id="result1">Масса ТКО в месяц: тонн</div>
+        <div class="mb-3" id="result2">Платеж в месяц: руб</div>
       </div>
     </div>
     <div class="col-md-6 mb-3" id="cont_col">
-      <h5 class="mb-3 text-center">Расчет по контейнерам</h5>
+      <h5 class="mb-3 text-center">Расчет по количеству и объему контейнеров</h5>
       <div class="mb-3">
         <label id="label-k1">Количество контейнеров</label>
         <input  type="number" class="form-control mb-3" name="k1" placeholder="" value="" step="1">
@@ -100,12 +98,16 @@
         <input  type="number" class="form-control mb-3" name="k2" placeholder="" value="">
         <label id="label-k3">Периодичность вывоза (в месяц)</label>
         <input  type="number" class="form-control mb-3" name="k3" placeholder="" value="">
-        <div class="mb-3 text-center"><INPUT class="btn btn-success" name="btn3" TYPE="button" VALUE="Рассчитать тариф" onClick="btnClick3();"></div>
+        <div class="mb-3 text-center"><INPUT class="btn btn-success" name="btn3" TYPE="button" VALUE="Рассчитать платеж" onClick="btnClick3();"></div>
       </div>
       <div class="mb-3">
-        <div class="mb-3" id="normk">Плотность мусора, кг/м<sup>3</sup>:</div>
-        <div class="mb-3" id="resultk1">Тариф за весь период:</div>
-        <div class="mb-3" id="resultk2">Тариф по месяцам:</div>
+        <div class="mb-3" id="rk1">Норматив накопления ТКО: кг/год на единицу:</div>
+        <div class="mb-3" id="rk2">Норматив накопления ТКО: м<sup>3</sup>/год на единицу</div>
+        <div class="mb-3" id="rk3">Плотность ТКО, кг/м<sup>3</sup>:</div>
+        <div class="mb-3" id="rk4">Тариф регоператора: 5 895,11 руб/тонна</div>
+        <div class="mb-3" id="rk5">Объем ТКО в месяц: м<sup>3</sup></div>
+        <div class="mb-3" id="rk6">Масса ТКО в месяц: тонн</div>
+        <div class="mb-3" id="rk7">Платеж в месяц: руб</div>
       </div>
     </div>
   </div>

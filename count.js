@@ -123,15 +123,10 @@ function btnClick2()
 
     var T=a[Number(sI)];
 
-    document.getElementById("norm").innerHTML="Норматив потребления "+number_format(T, 2, ',', ' ')+" кг/год на единицу";
     var i0=document.Test2.v1.value.replace(",",".");
-    var i1=document.Test2.v2.value;
-    document.getElementById("result1").innerHTML="Тариф: "+number_format((T/12)*i0*i1*5.89511,2,',',' ')+" за период";
-    var txt1 = "";
-    for (let i = 1; i <= i1; i++) {
-        txt1 = txt1 + "<p>Тариф за " + String(i) + " месяц: "+ number_format((T/12)*i0*5.89511, 2, ',', ' ')+"</p>"
-    }
-    document.getElementById("result2").innerHTML="<p>Тариф по месяцам</p>"+txt1
+
+    document.getElementById("result1").innerHTML="Масса ТКО в месяц: "+number_format(((T/12)*i0)/1000,2,',',' ')+" тонн";
+    document.getElementById("result2").innerHTML="<p>Платеж в месяц:"+number_format(((T/12)*i0)/1000*5895.11,2,',',' ')+" руб</p>"
 
 }
 
@@ -140,11 +135,24 @@ function btnClick3()
     var c = [33.1428571428571, 	66.2368421052632, 	27.7301587301587, 	75, 	65.8745614035088, 	73.0931174089069, 	55.8899082568807, 	156.75, 	35.6503298774741, 	72.0476190476191, 	94.4242424242424, 	117.818181818182, 	27.5, 	52.1392405063291, 	101.636363636364, 	14.2214285714286, 	124.814814814815, 	57.875, 	101, 	81.9285714285714, 	25.0588235294118, 	28.5968253968254, 	99.3627450980392, 	63.3333333333333, 	117.240875912409]
     var sIc=document.Test2.Item.selectedIndex;
 
-    var T=c[Number(sIc)];
+    var T2=c[Number(sIc)];
+
+    var a = [2.32, 	25.17, 	17.47, 	2.25, 	750.97, 	541.62, 	121.84, 	37.62, 	378.25, 	15.13, 	31.16, 	12.96, 	2.2, 	41.19, 	11.18, 	19.91, 	33.7, 	4.63, 	3.03, 	183.52, 	4.26, 	90.08, 	304.05, 	1.9, 	160.62];
+
+    var T=a[Number(sIc)];
 
     var k0=document.Test2.k1.value.replace(",",".");
     var k1=document.Test2.k2.value.replace(",",".");
     var k2=document.Test2.k3.value.replace(",",".");
+
+    document.getElementById("rk1").innerHTML="Норматив накопления ТКО: "+number_format(T, 2, ',', ' ')+" кг/год на единицу";
+    document.getElementById("rk2").innerHTML="Норматив накопления ТКО: "+number_format(T/T2, 2, ',', ' ')+" м<sup>3</sup>/год на единицу";
+    document.getElementById("rk3").innerHTML="Плотность ТКО: "+number_format(T2,2,","," ")+" кг/м<sup>3</sup>";
+    document.getElementById("rk4").innerHTML="Тариф регоператора: 5 895,11 руб/тонна";
+    document.getElementById("rk5").innerHTML="Объем ТКО в месяц: "+number_format(k0*k1*k2, 2, ',', ' ')+" м<sup>3</sup>";
+    document.getElementById("rk6").innerHTML="Масса ТКО в месяц: "+number_format(T2*k0*k1*k2/1000, 2, ',', ' ')+" тонн";
+    document.getElementById("rk7").innerHTML="Платеж в месяц: "+number_format(T2*k0*k1*k2*5.89511, 2, ',', ' ')+" руб";
+
 
     document.getElementById("normk").innerHTML="<p>Плотность мусора: "+number_format(T, 2, ',', ' ')+" кг/м<sup>3</sup></p>" +
         "<p>Количество ТКО в месяц, т: "+number_format(T*k0*k1*k2/1000, 2, ',', ' ')+"</p>";
