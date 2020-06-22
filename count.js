@@ -126,7 +126,7 @@ function btnClick2()
     var i0=document.Test2.v1.value.replace(",",".");
 
     document.getElementById("result1").innerHTML="Масса ТКО в месяц: "+number_format(((T/12)*i0)/1000,2,',',' ')+" тонн";
-    document.getElementById("result2").innerHTML="<p>Платеж в месяц:"+number_format(((T/12)*i0)/1000*5895.11,2,',',' ')+" руб</p>"
+    document.getElementById("result2").innerHTML="<p>Платеж в месяц: "+number_format(((T/12)*i0)/1000*5895.11,2,',',' ')+" руб</p>"
 
 }
 
