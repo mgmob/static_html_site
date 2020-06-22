@@ -49,7 +49,7 @@ function listClck(){
             document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
             break;
         case 5:
-            document.getElementById("label1").innerHTML="Укажите количество машино-мест:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
             break;
         case 6:
             document.getElementById("label1").innerHTML="Укажите количество машино-мест:";
@@ -64,19 +64,19 @@ function listClck(){
             document.getElementById("label1").innerHTML="Укажите количество машино-мест:";
             break;
         case 10:
-            document.getElementById("label1").innerHTML="Укажите количество пассажиров:";
+            document.getElementById("label1").innerHTML="Укажите количество машино-мест:";
             break;
         case 11:
-            document.getElementById("label1").innerHTML="Укажите количество детей:";
+            document.getElementById("label1").innerHTML="Укажите количество пассажиров:";
             break;
         case 12:
-            document.getElementById("label1").innerHTML="Укажите количество учащихся:";
+            document.getElementById("label1").innerHTML="Укажите количество детей:";
             break;
         case 13:
             document.getElementById("label1").innerHTML="Укажите количество учащихся:";
             break;
         case 14:
-            document.getElementById("label1").innerHTML="Укажите количество мест:";
+            document.getElementById("label1").innerHTML="Укажите количество учащихся:";
             break;
         case 15:
             document.getElementById("label1").innerHTML="Укажите количество мест:";
@@ -85,30 +85,39 @@ function listClck(){
             document.getElementById("label1").innerHTML="Укажите количество мест:";
             break;
         case 17:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
+            document.getElementById("label1").innerHTML="Укажите количество мест:";
             break;
         case 18:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
+            document.getElementById("label1").innerHTML="Укажите количество мест:";
             break;
         case 19:
             document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
             break;
         case 20:
-            document.getElementById("label1").innerHTML="Укажите количество мест:";
-            break;
-        case 21:
             document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
             break;
-        case 22:
+        case 21:
             document.getElementById("label1").innerHTML="Укажите количество мест:";
             break;
+        case 22:
+            document.getElementById("label1").innerHTML="Укажите количество объектов:";
+            break;
         case 23:
-            document.getElementById("label1").innerHTML="Укажите количество мест:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
             break;
         case 24:
             document.getElementById("label1").innerHTML="Укажите количество мест:";
             break;
         case 25:
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
+            break;
+        case 26:
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
+            break;
+        case 27:
+            document.getElementById("label1").innerHTML="Укажите количество мест:";
+            break;
+        case 28:
             document.getElementById("label1").innerHTML="Укажите количество участников:";
             break;
     }
@@ -119,7 +128,7 @@ function btnClick2()
 {
 
     var sI=document.Test2.Item.selectedIndex;
-    var a = [2.32, 	25.17, 	17.47, 	2.25, 	750.97, 	541.62, 	121.84, 	37.62, 	378.25, 	15.13, 	31.16, 	12.96, 	2.2, 	41.19, 	11.18, 	19.91, 	33.7, 	4.63, 	3.03, 	183.52, 	4.26, 	90.08, 	304.05, 	1.9, 	160.62];
+    var a = [2.32,	0.92,	28.63,	15.09,	2.25,	750.97,	541.62,	121.84,	37.62,	378.25,	15.13,	31.16,	12.96,	2.2,	41.19,	11.18,	19.91,	32.63,	4.63,	3.03,	183.52,	238.31,	4.26,	90.08,	10.03,	304.05,	1.9,	160.62]
 
     var T=a[Number(sI)];
 
@@ -133,12 +142,12 @@ function btnClick2()
 
 function btnClick3()
 {
-    var c = [33.1428571428571, 	66.2368421052632, 	27.7301587301587, 	75, 	65.8745614035088, 	73.0931174089069, 	55.8899082568807, 	156.75, 	35.6503298774741, 	72.0476190476191, 	94.4242424242424, 	117.818181818182, 	27.5, 	52.1392405063291, 	101.636363636364, 	14.2214285714286, 	124.814814814815, 	57.875, 	101, 	81.9285714285714, 	25.0588235294118, 	28.5968253968254, 	99.3627450980392, 	63.3333333333333, 	117.240875912409]
+    var c = [33.1428571428571,	18.4,	66.5813953488372,	19.8552631578947,	75,	65.8745614035088,	73.0931174089069,	55.8899082568807,	156.75,	35.6503298774741,	72.0476190476191,	94.4242424242424,	117.818181818182,	27.5,	52.1392405063291,	101.636363636364,	14.2214285714286,	148.318181818182,	57.875,	101,	81.9285714285714,	28.6774969915764,	25.0588235294118,	28.5968253968254,	94.622641509434,	99.3627450980392,	63.3333333333333,	117.240875912409]
     var sIc=document.Test2.Item.selectedIndex;
 
     var T2=c[Number(sIc)];
 
-    var a = [2.32, 	25.17, 	17.47, 	2.25, 	750.97, 	541.62, 	121.84, 	37.62, 	378.25, 	15.13, 	31.16, 	12.96, 	2.2, 	41.19, 	11.18, 	19.91, 	33.7, 	4.63, 	3.03, 	183.52, 	4.26, 	90.08, 	304.05, 	1.9, 	160.62];
+    var a = [2.32,	0.92,	28.63,	15.09,	2.25,	750.97,	541.62,	121.84,	37.62,	378.25,	15.13,	31.16,	12.96,	2.2,	41.19,	11.18,	19.91,	32.63,	4.63,	3.03,	183.52,	238.31,	4.26,	90.08,	10.03,	304.05,	1.9,	160.62]
 
     var T=a[Number(sIc)];
 
