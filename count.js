@@ -37,16 +37,16 @@ function listClck(){
     // alert(sI2)
     switch (Number(sI2)) {
         case 1:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>3</sup>:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
             break;
         case 2:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>3</sup>:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
             break;
         case 3:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>3</sup>:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
             break;
         case 4:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>3</sup>:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
             break;
         case 5:
             document.getElementById("label1").innerHTML="Укажите количество машино-мест:";
@@ -85,19 +85,19 @@ function listClck(){
             document.getElementById("label1").innerHTML="Укажите количество мест:";
             break;
         case 17:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>3</sup>:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
             break;
         case 18:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>3</sup>:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
             break;
         case 19:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>3</sup>:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
             break;
         case 20:
             document.getElementById("label1").innerHTML="Укажите количество мест:";
             break;
         case 21:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>3</sup>:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
             break;
         case 22:
             document.getElementById("label1").innerHTML="Укажите количество мест:";
@@ -125,6 +125,7 @@ function btnClick2()
 
     var i0=document.Test2.v1.value.replace(",",".");
 
+    document.getElementById("r0").innerHTML="Норматив накопления ТКО: "+number_format(T,2,',',' ')+" кг/год на единицу";
     document.getElementById("result1").innerHTML="Масса ТКО в месяц: "+number_format(((T/12)*i0)/1000,2,',',' ')+" тонн";
     document.getElementById("result2").innerHTML="<p>Платеж в месяц: "+number_format(((T/12)*i0)/1000*5895.11,2,',',' ')+" руб</p>"
 
