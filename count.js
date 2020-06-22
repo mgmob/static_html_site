@@ -37,16 +37,16 @@ function listClck(){
     // alert(sI2)
     switch (Number(sI2)) {
         case 1:
-            document.getElementById("label1").innerHTML="Укажите общую площадь:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>3</sup>:";
             break;
         case 2:
-            document.getElementById("label1").innerHTML="Укажите общую площадь:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>3</sup>:";
             break;
         case 3:
-            document.getElementById("label1").innerHTML="Укажите общую площадь:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>3</sup>:";
             break;
         case 4:
-            document.getElementById("label1").innerHTML="Укажите общую площадь:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>3</sup>:";
             break;
         case 5:
             document.getElementById("label1").innerHTML="Укажите количество машино-мест:";
@@ -85,19 +85,19 @@ function listClck(){
             document.getElementById("label1").innerHTML="Укажите количество мест:";
             break;
         case 17:
-            document.getElementById("label1").innerHTML="Укажите общую площадь:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>3</sup>:";
             break;
         case 18:
-            document.getElementById("label1").innerHTML="Укажите общую площадь:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>3</sup>:";
             break;
         case 19:
-            document.getElementById("label1").innerHTML="Укажите общую площадь:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>3</sup>:";
             break;
         case 20:
             document.getElementById("label1").innerHTML="Укажите количество мест:";
             break;
         case 21:
-            document.getElementById("label1").innerHTML="Укажите общую площадь:";
+            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>3</sup>:";
             break;
         case 22:
             document.getElementById("label1").innerHTML="Укажите количество мест:";
@@ -124,7 +124,7 @@ function btnClick2()
     var T=a[Number(sI)];
 
     document.getElementById("norm").innerHTML="Норматив потребления "+number_format(T, 2, ',', ' ')+" кг/год на единицу";
-    var i0=document.Test2.v1.value;
+    var i0=document.Test2.v1.value.replace(",",".");
     var i1=document.Test2.v2.value;
     document.getElementById("result1").innerHTML="Тариф: "+number_format((T/12)*i0*i1*5.89511,2,',',' ')+" за период";
     var txt1 = "";
@@ -142,9 +142,9 @@ function btnClick3()
 
     var T=c[Number(sIc)];
 
-    var k0=document.Test2.k1.value;
-    var k1=document.Test2.k2.value;
-    var k2=document.Test2.k3.value;
+    var k0=document.Test2.k1.value.replace(",",".");
+    var k1=document.Test2.k2.value.replace(",",".");
+    var k2=document.Test2.k3.value.replace(",",".");
 
     document.getElementById("normk").innerHTML="<p>Плотность мусора: "+number_format(T, 2, ',', ' ')+" кг/м<sup>3</sup></p>" +
         "<p>Количество ТКО в месяц, т: "+number_format(T*k0*k1*k2/1000, 2, ',', ' ')+"</p>";
