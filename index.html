@@ -28,193 +28,70 @@
     </style>
 	
 	
-<script><!--
-    function listClck(){
-      //alert("OK!");
-      var sI1=document.Test2.Item.selectedIndex;
-      var sI2=document.Test2.Item.options[sI1].value;
-     // alert(sI2)
-      switch (Number(sI2)) {	
-		    case 1: 
-			     document.getElementById("label1").innerHTML="Укажите общую площадь:"; 
-			     break;
-           	case 2: 
-			     document.getElementById("label1").innerHTML="Укажите общую площадь:"; 
-			     break;
-    		case 3: 
-    			     document.getElementById("label1").innerHTML="Укажите общую площадь:"; 
-    			     break;
-    		case 4: 
-    			     document.getElementById("label1").innerHTML="Укажите общую площадь:"; 
-    			     break;
-    		case 5: 
-    			     document.getElementById("label1").innerHTML="Укажите количество машино-мест:"; 
-    			     break;
-    		case 6: 
-    			     document.getElementById("label1").innerHTML="Укажите количество машино-мест:"; 
-    			     break;
-    		case 7: 
-    			     document.getElementById("label1").innerHTML="Укажите количество машино-мест:"; 
-    			     break;
-    		case 8: 
-    			     document.getElementById("label1").innerHTML="Укажите количество машино-мест:"; 
-    			     break;
-    		case 9: 
-    			     document.getElementById("label1").innerHTML="Укажите количество машино-мест:"; 
-    			     break;
-    		case 10: 
-    			     document.getElementById("label1").innerHTML="Укажите количество пассажиров:"; 
-    			     break;
-    		case 11: 
-    			     document.getElementById("label1").innerHTML="Укажите количество детей:"; 
-    			     break;
-    		case 12: 
-    			     document.getElementById("label1").innerHTML="Укажите количество учащихся:"; 
-    			     break;
-    		case 13: 
-    			     document.getElementById("label1").innerHTML="Укажите количество учащихся:"; 
-    			     break;
-    		case 14: 
-    			     document.getElementById("label1").innerHTML="Укажите количество мест:"; 
-    			     break;
-    		case 15: 
-    			     document.getElementById("label1").innerHTML="Укажите количество мест:"; 
-    			     break;
-    		case 16: 
-    			     document.getElementById("label1").innerHTML="Укажите количество мест:"; 
-    			     break;
-    		case 17: 
-    			     document.getElementById("label1").innerHTML="Укажите общую площадь:"; 
-    			     break;
-    		case 18: 
-    			     document.getElementById("label1").innerHTML="Укажите общую площадь:"; 
-    			     break;
-    		case 19: 
-    			     document.getElementById("label1").innerHTML="Укажите общую площадь:"; 
-    			     break;
-    		case 20: 
-    			     document.getElementById("label1").innerHTML="Укажите количество мест:"; 
-    			     break;
-    		case 21: 
-    			     document.getElementById("label1").innerHTML="Укажите общую площадь:"; 
-    			     break;
-    		case 22: 
-    			     document.getElementById("label1").innerHTML="Укажите количество мест:"; 
-    			     break;
-    		case 23: 
-    			     document.getElementById("label1").innerHTML="Укажите количество мест:"; 
-    			     break;
-    		case 24: 
-    			     document.getElementById("label1").innerHTML="Укажите количество мест:"; 
-    			     break;
-    		case 25: 
-    			     document.getElementById("label1").innerHTML="Укажите количество участников:"; 
-    			     break;
-      }
-     
-    }
- 
-	function btnClick2()
-        {
-           
-	          var sI=document.Test2.Item.selectedIndex;
-            var a = [2.32, 	25.17, 	17.47, 	2.25, 	750.97, 	541.62, 	121.84, 	37.62, 	378.25, 	15.13, 	31.16, 	12.96, 	2.2, 	41.19, 	11.18, 	19.91, 	33.7, 	4.63, 	3.03, 	183.52, 	4.26, 	90.08, 	304.05, 	1.9, 	160.62];
+<script src="count.js"></script>
 
-            var T=a[Number(sI)];
-
-            document.getElementById("norm").innerHTML="Норматив потребления "+String(T)+" кг/год на единицу";
-            var i0=document.Test2.v1.value;
-            var i1=document.Test2.v2.value;
-            document.getElementById("result1").innerHTML="Тариф: "+String((T/12)*i0*i1*5.89511)+" за период";
-            var txt1 = "";
-            for (let i = 1; i <= i1; i++) {
-              txt1 = txt1 + "<p>Тариф за " + String(i) + " месяц: "+ String((T/12)*i0*5.89511)+"</p>"
-            }
-            document.getElementById("result2").innerHTML="<p>Тариф по месяцам</p>"+txt1
-		
-            }
-        //-->
-    	</script>
 <title>Калькулятор тарифа ТКО</title>
 </head>
   <body>
 	  
 	  <div class="container">
   <div class="py-5 text-center">
-    <img class="d-block mx-auto mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-    <h2>Checkout form</h2>
-    <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+    <h2>Калькулятор тарифа ТКО</h2>
+    <p class="lead">Рассчитайте тариф на ТКО</p>
   </div>
 
   <div class="row">
-    <div class="col-md-4 order-md-2 mb-4">
-      <h4 class="d-flex justify-content-between align-items-center mb-3">
-        <span class="text-muted">Your cart</span>
-        <span class="badge badge-secondary badge-pill">3</span>
-      </h4>
-      <ul class="list-group mb-3">
-        <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div>
-            <h6 class="my-0">Product name</h6>
-            <small class="text-muted">Brief description</small>
-          </div>
-          <span class="text-muted">$12</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div>
-            <h6 class="my-0">Second product</h6>
-            <small class="text-muted">Brief description</small>
-          </div>
-          <span class="text-muted">$8</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between lh-condensed">
-          <div>
-            <h6 class="my-0">Third item</h6>
-            <small class="text-muted">Brief description</small>
-          </div>
-          <span class="text-muted">$5</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between bg-light">
-          <div class="text-success">
-            <h6 class="my-0">Promo code</h6>
-            <small>EXAMPLECODE</small>
-          </div>
-          <span class="text-success">-$5</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between">
-          <span>Total (USD)</span>
-          <strong>$20</strong>
-        </li>
-      </ul>
 
-      <form class="card p-2">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Promo code">
-          <div class="input-group-append">
-            <button type="submit" class="btn btn-secondary">Redeem</button>
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="col-md-8 order-md-1">
-      <h4 class="mb-3">Billing address</h4>
-      <form class="needs-validation" novalidate>
+    <div class="col-md-12 order-md-1">
+      <h4 class="mb-3">Расчет тарифа для юридических лиц</h4>
+      <form name="Test2" class="needs-validation" novalidate>
         <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="firstName">First name</label>
-            <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-            <div class="invalid-feedback">
-              Valid first name is required.
-            </div>
+          <div class="col-md-12 mb-3">
+            <label>Категория организации</label>
+            <SELECT class="form-control" NAME="Item" SIZE=5 onchange="listClck();">
+            <OPTION VALUE ="1">Административные, офисные учреждения</option>
+            <OPTION VALUE ="2">магазины (продовольственные, смешанных товаров, промтоварные, универсальные магазины)</option>
+            <OPTION VALUE ="3">нестационарные торговые объекты</option>
+            <OPTION VALUE ="4">рынки промтоварные, торговые центры</option>
+            <OPTION VALUE ="5">автомастерские, шиномонтажные мастерские, станции технического обслуживания</option>
+            <OPTION VALUE ="6">автозаправочные станции</option>
+            <OPTION VALUE ="7">автотранспортные предприятия</option>
+            <OPTION VALUE ="8">гаражи, парковки закрытого типа, автостоянки</option>
+            <OPTION VALUE ="9">автомойки</option>
+            <OPTION VALUE ="10">железнодорожные и автовокзалы, аэропорты, речные порты</option>
+            <OPTION VALUE ="11">дошкольное образовательное учреждение</option>
+            <OPTION VALUE ="12">общеобразовательное учреждение</option>
+            <OPTION VALUE ="13">Иные учреждения, осуществляющие образовательный процесс</option>
+            <OPTION VALUE ="14">клубы, кинотеатры, дома и дворцы культуры</option>
+            <OPTION VALUE ="15">театры, цирки, концертные залы</option>
+            <OPTION VALUE ="16">библиотеки</option>
+            <OPTION VALUE ="17">архивы</option>
+            <OPTION VALUE ="18">выставочные залы, музеи</option>
+            <OPTION VALUE ="19">спортивные клубы, центры, комплексы</option>
+            <OPTION VALUE ="20">Предприятия общественного питания</option>
+            <OPTION VALUE ="21">мастерские и ателье</option>
+            <OPTION VALUE ="22">парикмахерские, косметические салоны, салоны красоты</option>
+            <OPTION VALUE ="23">гостиницы, пансионаты, дома отдыха, туристические базы</option>
+            <OPTION VALUE ="24">Кладбища</option>
+            <OPTION VALUE ="25">Садоводческие некоммерческие товарищества</option>
+          </SELECT>
+
           </div>
-          <div class="col-md-6 mb-3">
-            <label for="lastName">Last name</label>
-            <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-            <div class="invalid-feedback">
-              Valid last name is required.
+            <label class="col-md-6 mb-3">
+            <label id="label1">Укажите...</label>
+            <input type="text" class="form-control" name="v1" placeholder="" value="" required>
+            <Label id="label2">Укажите период (месяцев):</label>
+            <INPUT class="form-control" type="text" name="v2" value="0">
+            <hr class="mb-4">
+            <INPUT class="btn btn-success" name="btn1" TYPE="button" VALUE="Рассчитать тариф" onClick="btnClick2();">
+              <hr class="mb-4">
+            <div class="col-md-6 mb-3">
+              <div id="norm"></div>
+              <div id="result1"></div>
+              <div id="result2"></div>
             </div>
-          </div>
         </div>
+
 
         <div class="mb-3">
           <label for="username">Username</label>
@@ -356,10 +233,10 @@
 </div>
     <h1>Расчет тарифа ТКО для юридических лиц онлайн</h1>
     
-<FORM NAME="Test2">
+<FORM NAME="Test22">
 <div class="form-group" id="label0">
 		<h3>Выберите тип организации:</h3>
-    <SELECT class="form-control" NAME="Item" SIZE=5 onchange="listClck();">
+    <SELECT class="form-control" NAME="Item-" SIZE=5 onchange="listClck();">
          <OPTION VALUE ="1">Административные, офисные учреждения</option>
       	 <OPTION VALUE ="2">магазины (продовольственные, смешанных товаров, промтоварные, универсальные магазины)</option>
       	 <OPTION VALUE ="3">нестационарные торговые объекты</option>
@@ -389,17 +266,13 @@
 	
 </div>
 
-	<div class="section" id="label1"></div>
-	<div class="section" ><INPUT class="form-control" type="text" name="v1" value="0"></div>
+	<div class="section" id="label10"></div>
+	<div class="section" ><INPUT class="form-control" type="text" name="v10" value="0"></div>
         <div class="section"  id="label2">Укажите период (месяцев):</div>
-	<div class="section" ><INPUT class="form-control" type="text" name="v2" value="0"></div>
+	<div class="section" ><INPUT class="form-control" type="text" name="v20" value="0"></div>
 	<div class="section" ><p><INPUT class="btn btn-success" name="btn1" TYPE="button" VALUE="Рассчитать тариф" onClick="btnClick2();"></p></div>
 
 </FORM>
-<div class="section">
-    <div id="norm"></div>
-    <div id="result1"></div>
-    <div id="result2"></div>
-</div>
+
   </body>
 </html>
