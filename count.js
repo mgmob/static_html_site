@@ -39,32 +39,36 @@ function listClck(){
     var sI1=document.Test2.Item.selectedIndex;
     var sI2=document.Test2.Item.options[sI1].value;
     // alert(sI2)
-    switch (sI2) {
-        case "1": document.getElementById("label1").innerHTML="Укажите общую площадь"; break;
-        case "2": document.getElementById("label1").innerHTML="Укажите общую площадь"; break;
-        case "3": document.getElementById("label1").innerHTML="Укажите общую площадь"; break;
-        case "4": document.getElementById("label1").innerHTML="Укажите общую площадь"; break;
-        case "5": document.getElementById("label1").innerHTML="Укажите количество машино-мест"; break;
-        case "6": document.getElementById("label1").innerHTML="Укажите количество машино-мест"; break;
-        case "7": document.getElementById("label1").innerHTML="Укажите количество машино-мест"; break;
-        case "8": document.getElementById("label1").innerHTML="Укажите количество машино-мест"; break;
-        case "9": document.getElementById("label1").innerHTML="Укажите количество машино-мест"; break;
-        case "10": document.getElementById("label1").innerHTML="Укажите количество пассажиров"; break;
-        case "11": document.getElementById("label1").innerHTML="Укажите количество детей"; break;
-        case "12": document.getElementById("label1").innerHTML="Укажите количество учащихся"; break;
-        case "13": document.getElementById("label1").innerHTML="Укажите количество учащихся"; break;
-        case "14": document.getElementById("label1").innerHTML="Укажите количество мест"; break;
-        case "15": document.getElementById("label1").innerHTML="Укажите количество мест"; break;
-        case "16": document.getElementById("label1").innerHTML="Укажите количество мест"; break;
-        case "17": document.getElementById("label1").innerHTML="Укажите общую площадь"; break;
-        case "18": document.getElementById("label1").innerHTML="Укажите общую площадь"; break;
-        case "19": document.getElementById("label1").innerHTML="Укажите общую площадь"; break;
-        case "20": document.getElementById("label1").innerHTML="Укажите количество мест"; break;
-        case "21": document.getElementById("label1").innerHTML="Укажите общую площадь"; break;
-        case "22": document.getElementById("label1").innerHTML="Укажите количество мест"; break;
-        case "23": document.getElementById("label1").innerHTML="Укажите количество мест"; break;
-        case "24": document.getElementById("label1").innerHTML="Укажите количество мест"; break;
-        case "25": document.getElementById("label1").innerHTML="Укажите количество участников"; break;
+    switch (Number(sI2)) {
+        case 1: document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:"; break;
+        case 2: document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:"; break;
+        case 3: document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:"; break;
+        case 4: document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:"; break;
+        case 5: document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:"; break;
+        case 6: document.getElementById("label1").innerHTML="Укажите количество машино-мест:"; break;
+        case 7: document.getElementById("label1").innerHTML="Укажите количество машино-мест:"; break;
+        case 8: document.getElementById("label1").innerHTML="Укажите количество машино-мест:"; break;
+        case 9: document.getElementById("label1").innerHTML="Укажите количество машино-мест:"; break;
+        case 10: document.getElementById("label1").innerHTML="Укажите количество машино-мест:"; break;
+        case 11: document.getElementById("label1").innerHTML="Укажите количество пассажиров:"; break;
+        case 12: document.getElementById("label1").innerHTML="Укажите количество детей:"; break;
+        case 13: document.getElementById("label1").innerHTML="Укажите количество учащихся:"; break;
+        case 14: document.getElementById("label1").innerHTML="Укажите количество учащихся:"; break;
+        case 15: document.getElementById("label1").innerHTML="Укажите количество мест:"; break;
+        case 16: document.getElementById("label1").innerHTML="Укажите количество мест:"; break;
+        case 17: document.getElementById("label1").innerHTML="Укажите количество мест:"; break;
+        case 18: document.getElementById("label1").innerHTML="Укажите количество мест:"; break;
+        case 19: document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:"; break;
+        case 20: document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:"; break;
+        case 21: document.getElementById("label1").innerHTML="Укажите количество мест:"; break;
+        case 22: document.getElementById("label1").innerHTML="Укажите количество объектов:"; break;
+        case 23: document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:"; break;
+        case 24: document.getElementById("label1").innerHTML="Укажите количество мест:"; break;
+        case 25: document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:"; break;
+        case 26: document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:"; break;
+        case 27: document.getElementById("label1").innerHTML="Укажите количество мест:"; break;
+        case 28: document.getElementById("label1").innerHTML="Укажите количество участников:"; break;
+
     }
 
 }
@@ -122,30 +126,33 @@ function btnClick3()
 }
 function btnaddToLst() {
     var mUnit = ["м<sup>3</sup>",
-                 "м<sup>3</sup>",
-                 "м<sup>3</sup>",
-                 "м<sup>3</sup>",
-                    "машино-мест",
-                    "машино-мест",
-                    "машино-мест",
-                    "машино-мест",
-                    "машино-мест",
-                    "пассажиров",
-                    "детей",
-                    "учащихся",
-                    "учащихся",
-                    "мест",
-                    "мест",
-                    "мест",
-                    "м<sup>3</sup>",
-                    "м<sup>3</sup>",
-                    "м<sup>3</sup>",
-                    "мест",
-                    "м<sup>3</sup>",
-                    "мест",
-                    "мест",
-                    "мест",
-                    "участников"]
+        "м<sup>3</sup>",
+        "м<sup>3</sup>",
+        "м<sup>3</sup>",
+        "м<sup>3</sup>",
+        "машино-мест",
+        "машино-мест",
+        "машино-мест",
+        "машино-мест",
+        "машино-мест",
+        "пассажиров",
+        "детей",
+        "учащихся",
+        "учащихся",
+        "мест",
+        "мест",
+        "мест",
+        "мест",
+        "м<sup>3</sup>",
+        "м<sup>3</sup>",
+        "мест",
+        "объектов",
+        "м<sup>3</sup>",
+        "мест",
+        "мест",
+        "мест",
+        "мест",
+        "участников"]
     var stcond = document.getElementById("r3").style.display;
     if (stcond == "none") {
         document.getElementById("r3").style.display=null;
@@ -164,10 +171,10 @@ function btnaddToLst() {
     xx.push({
         0: sI02,
         1: mUnit[sI01]+":<br> "+number_format(Number(document.getElementById("v1").value),2,",", " "),
-        2: document.getElementById("result1").innerHTML,
-        3: document.getElementById("r0").innerHTML,
+        2: document.getElementById("result1").innerHTML.replace("Масса ТКО в месяц: ",""),
+        3: document.getElementById("r0").innerHTML.replace("Норматив накопления ТКО: ",""),
         4: "5 895,11 руб/тонна",
-        5: document.getElementById("result2").innerHTML
+        5: document.getElementById("result2").innerHTML.replace("Платеж в месяц: ","")
     });
     //вставляем div-колонки
     for (i=0; i<6; i++){
@@ -178,15 +185,21 @@ function btnaddToLst() {
             divRow.insertBefore(divCol, divRow.lastChild);
         }
 
-        divCol.className="col mb-3";
+        divCol.className="col border";
         divCol.id=divRow.id+"i"+String(i);
         divCol.innerHTML=xx[xx.length-1][i];
     }
     sumPay = sumPay+lastOrgPay;
+    // ищем строку суммы. Если есть - то удаляем. Если нет - то ничего не делаем, она создастся заново
+    if (document.getElementById("rSumi0") !== null) {
+        var node = document.querySelector('#rSumi0');
+        node.parentNode.removeChild(node);
+    }
     var sumDiv = document.createElement("div")
     divContainer.insertBefore(sumDiv, divRow.nextSibling);
     sumDiv.className="row text-right font-weight-bold";
     sumDiv.id="rSum";
+
     for (i=0; i<6; i++){
         divCol = document.createElement("div");
         if (sumDiv.lastChild !== null) {
