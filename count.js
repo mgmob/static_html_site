@@ -223,37 +223,5 @@ function btnaddToLst() {
             divCol.innerHTML="Итого: "+number_format(sumPay,2,","," ")+" руб";
         }
     }
-
-
-    /*
-<div class="row" id="r4"  style="display: none">
-        <div class="col mb-3 text-center" id="i1">
-        Категория организации
-    </div>
-    <div class="col mb-3 text-center" id="i2">
-        Количество единиц
-    </div>
-    <div class="col mb-3 text-center" id="i3">
-        Масса ТКО в месяц, тонн
-    </div>
-    <div class="col mb-3 text-center" id="i4">
-        Норматив накопления ТКО
-    </div>
-    <div class="col mb-3 text-center" id="i5">
-        Тариф
-        </div>
-        <div class="col mb-3 text-center" id="i6">
-        Платеж в месяц
-    </div>
-    var stcond = document.getElementById("r3").style.display;
-
-    if (stcond == "none") {
-        document.getElementById("r3").style.display="block";
-        document.getElementById("r3").scrollIntoView(true);
-    }
-    else {
-        document.getElementById("r3").style.display="none";
-    }
-     */
     document.getElementById("r3").scrollIntoView(true);
 }
