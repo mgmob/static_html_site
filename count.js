@@ -5,6 +5,8 @@
  thousands_sep - разделитель тысячных
  ***/
 var xx = new Array();
+var lastOrgPay =0;
+var sumPay = 0;
 
 function number_format(number, decimals, dec_point, thousands_sep) {
     number = (number + '').replace(/[^0-9+\-Ee.]/g, '');
@@ -37,91 +39,32 @@ function listClck(){
     var sI1=document.Test2.Item.selectedIndex;
     var sI2=document.Test2.Item.options[sI1].value;
     // alert(sI2)
-    switch (Number(sI2)) {
-        case 1:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
-            break;
-        case 2:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
-            break;
-        case 3:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
-            break;
-        case 4:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
-            break;
-        case 5:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
-            break;
-        case 6:
-            document.getElementById("label1").innerHTML="Укажите количество машино-мест:";
-            break;
-        case 7:
-            document.getElementById("label1").innerHTML="Укажите количество машино-мест:";
-            break;
-        case 8:
-            document.getElementById("label1").innerHTML="Укажите количество машино-мест:";
-            break;
-        case 9:
-            document.getElementById("label1").innerHTML="Укажите количество машино-мест:";
-            break;
-        case 10:
-            document.getElementById("label1").innerHTML="Укажите количество машино-мест:";
-            break;
-        case 11:
-            document.getElementById("label1").innerHTML="Укажите количество пассажиров:";
-            break;
-        case 12:
-            document.getElementById("label1").innerHTML="Укажите количество детей:";
-            break;
-        case 13:
-            document.getElementById("label1").innerHTML="Укажите количество учащихся:";
-            break;
-        case 14:
-            document.getElementById("label1").innerHTML="Укажите количество учащихся:";
-            break;
-        case 15:
-            document.getElementById("label1").innerHTML="Укажите количество мест:";
-            break;
-        case 16:
-            document.getElementById("label1").innerHTML="Укажите количество мест:";
-            break;
-        case 17:
-            document.getElementById("label1").innerHTML="Укажите количество мест:";
-            break;
-        case 18:
-            document.getElementById("label1").innerHTML="Укажите количество мест:";
-            break;
-        case 19:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
-            break;
-        case 20:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
-            break;
-        case 21:
-            document.getElementById("label1").innerHTML="Укажите количество мест:";
-            break;
-        case 22:
-            document.getElementById("label1").innerHTML="Укажите количество объектов:";
-            break;
-        case 23:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
-            break;
-        case 24:
-            document.getElementById("label1").innerHTML="Укажите количество мест:";
-            break;
-        case 25:
-            document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:";
-            break;
-        case 26:
-            document.getElementById("label1").innerHTML="Укажите количество мест:";
-            break;
-        case 27:
-            document.getElementById("label1").innerHTML="Укажите количество мест:";
-            break;
-        case 28:
-            document.getElementById("label1").innerHTML="Укажите количество участников:";
-            break;
+    switch (sI2) {
+        case "1": document.getElementById("label1").innerHTML="Укажите общую площадь"; break;
+        case "2": document.getElementById("label1").innerHTML="Укажите общую площадь"; break;
+        case "3": document.getElementById("label1").innerHTML="Укажите общую площадь"; break;
+        case "4": document.getElementById("label1").innerHTML="Укажите общую площадь"; break;
+        case "5": document.getElementById("label1").innerHTML="Укажите количество машино-мест"; break;
+        case "6": document.getElementById("label1").innerHTML="Укажите количество машино-мест"; break;
+        case "7": document.getElementById("label1").innerHTML="Укажите количество машино-мест"; break;
+        case "8": document.getElementById("label1").innerHTML="Укажите количество машино-мест"; break;
+        case "9": document.getElementById("label1").innerHTML="Укажите количество машино-мест"; break;
+        case "10": document.getElementById("label1").innerHTML="Укажите количество пассажиров"; break;
+        case "11": document.getElementById("label1").innerHTML="Укажите количество детей"; break;
+        case "12": document.getElementById("label1").innerHTML="Укажите количество учащихся"; break;
+        case "13": document.getElementById("label1").innerHTML="Укажите количество учащихся"; break;
+        case "14": document.getElementById("label1").innerHTML="Укажите количество мест"; break;
+        case "15": document.getElementById("label1").innerHTML="Укажите количество мест"; break;
+        case "16": document.getElementById("label1").innerHTML="Укажите количество мест"; break;
+        case "17": document.getElementById("label1").innerHTML="Укажите общую площадь"; break;
+        case "18": document.getElementById("label1").innerHTML="Укажите общую площадь"; break;
+        case "19": document.getElementById("label1").innerHTML="Укажите общую площадь"; break;
+        case "20": document.getElementById("label1").innerHTML="Укажите количество мест"; break;
+        case "21": document.getElementById("label1").innerHTML="Укажите общую площадь"; break;
+        case "22": document.getElementById("label1").innerHTML="Укажите количество мест"; break;
+        case "23": document.getElementById("label1").innerHTML="Укажите количество мест"; break;
+        case "24": document.getElementById("label1").innerHTML="Укажите количество мест"; break;
+        case "25": document.getElementById("label1").innerHTML="Укажите количество участников"; break;
     }
 
 }
@@ -139,7 +82,7 @@ function btnClick2()
     document.getElementById("r0").innerHTML="Норматив накопления ТКО: "+number_format(T,2,',',' ')+" кг/год на единицу";
     document.getElementById("result1").innerHTML="Масса ТКО в месяц: "+number_format(((T/12)*i0)/1000,2,',',' ')+" тонн";
     document.getElementById("result2").innerHTML="<p>Платеж в месяц: "+number_format(((T/12)*i0)/1000*5895.11,2,',',' ')+" руб</p>"
-
+    lastOrgPay = ((T/12)*i0)/1000*5895.11;
 }
 
 function btnClick3()
@@ -178,10 +121,34 @@ function btnClick3()
 
 }
 function btnaddToLst() {
-
+    var mUnit = ["м<sup>3</sup>",
+                 "м<sup>3</sup>",
+                 "м<sup>3</sup>",
+                 "м<sup>3</sup>",
+                    "машино-мест",
+                    "машино-мест",
+                    "машино-мест",
+                    "машино-мест",
+                    "машино-мест",
+                    "пассажиров",
+                    "детей",
+                    "учащихся",
+                    "учащихся",
+                    "мест",
+                    "мест",
+                    "мест",
+                    "м<sup>3</sup>",
+                    "м<sup>3</sup>",
+                    "м<sup>3</sup>",
+                    "мест",
+                    "м<sup>3</sup>",
+                    "мест",
+                    "мест",
+                    "мест",
+                    "участников"]
     var stcond = document.getElementById("r3").style.display;
     if (stcond == "none") {
-        document.getElementById("r3").style.display="block";
+        document.getElementById("r3").style.display=null;
     }
     var sI01=document.Test2.Item.selectedIndex;
     var sI02=document.Test2.Item.options[sI01].text;
@@ -192,11 +159,11 @@ function btnaddToLst() {
     var lastDiv = divContainer.lastChild;
     divContainer.insertBefore(divRow, lastDiv.nextSibling)
     divRow.className="row";
-    divRow.id="r"+String(xx.length+3);
+    divRow.id="r"+String(xx.length+4);
 
     xx.push({
         0: sI02,
-        1: document.getElementById("v1").innerHTML,
+        1: mUnit[sI01]+":<br> "+number_format(Number(document.getElementById("v1").value),2,",", " "),
         2: document.getElementById("result1").innerHTML,
         3: document.getElementById("r0").innerHTML,
         4: "5 895,11 руб/тонна",
@@ -214,6 +181,25 @@ function btnaddToLst() {
         divCol.className="col mb-3";
         divCol.id=divRow.id+"i"+String(i);
         divCol.innerHTML=xx[xx.length-1][i];
+    }
+    sumPay = sumPay+lastOrgPay;
+    var sumDiv = document.createElement("div")
+    divContainer.insertBefore(sumDiv, divRow.nextSibling);
+    sumDiv.className="row text-right font-weight-bold";
+    sumDiv.id="rSum";
+    for (i=0; i<6; i++){
+        divCol = document.createElement("div");
+        if (sumDiv.lastChild !== null) {
+            sumDiv.insertBefore(divCol, sumDiv.lastChild.nextSibling);
+        } else {
+            sumDiv.insertBefore(divCol, sumDiv.lastChild);
+        }
+
+        divCol.className="col mb-3";
+        divCol.id=sumDiv.id+"i"+String(i);
+        if (i=6) {
+            divCol.innerHTML="Итого: "+number_format(sumPay,2,","," ")+" руб";
+        }
     }
 
 
