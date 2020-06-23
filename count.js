@@ -4,6 +4,8 @@
  dec_point - символ разделителя
  thousands_sep - разделитель тысячных
  ***/
+var xx = new Array();
+
 function number_format(number, decimals, dec_point, thousands_sep) {
     number = (number + '').replace(/[^0-9+\-Ee.]/g, '');
     var n = !isFinite(+number) ? 0 : +number,
@@ -128,7 +130,7 @@ function btnClick2()
 {
 
     var sI=document.Test2.Item.selectedIndex;
-    var a = [2.32,	0.92,	28.63,	15.09,	2.25,	750.97,	541.62,	121.84,	37.62,	378.25,	15.13,	31.16,	12.96,	2.2,	41.19,	11.18,	19.91,	32.63,	4.63,	3.03,	183.52,	238.31,	4.26,	90.08,	10.03,	304.05,	1.9,	160.62]
+    let a = [2.32,	0.92,	28.63,	15.09,	2.25,	750.97,	541.62,	121.84,	37.62,	378.25,	15.13,	31.16,	12.96,	2.2,	41.19,	11.18,	19.91,	32.63,	4.63,	3.03,	183.52,	238.31,	4.26,	90.08,	10.03,	304.05,	1.9,	160.62]
 
     var T=a[Number(sI)];
 
@@ -142,12 +144,12 @@ function btnClick2()
 
 function btnClick3()
 {
-    var c = [33.1428571428571,	18.4,	66.5813953488372,	19.8552631578947,	75,	65.8745614035088,	73.0931174089069,	55.8899082568807,	156.75,	35.6503298774741,	72.0476190476191,	94.4242424242424,	117.818181818182,	27.5,	52.1392405063291,	101.636363636364,	14.2214285714286,	148.318181818182,	57.875,	101,	81.9285714285714,	28.6774969915764,	25.0588235294118,	28.5968253968254,	94.622641509434,	99.3627450980392,	63.3333333333333,	117.240875912409]
+    let c = [33.1428571428571,	18.4,	66.5813953488372,	19.8552631578947,	75,	65.8745614035088,	73.0931174089069,	55.8899082568807,	156.75,	35.6503298774741,	72.0476190476191,	94.4242424242424,	117.818181818182,	27.5,	52.1392405063291,	101.636363636364,	14.2214285714286,	148.318181818182,	57.875,	101,	81.9285714285714,	28.6774969915764,	25.0588235294118,	28.5968253968254,	94.622641509434,	99.3627450980392,	63.3333333333333,	117.240875912409]
     var sIc=document.Test2.Item.selectedIndex;
 
     var T2=c[Number(sIc)];
 
-    var a = [2.32,	0.92,	28.63,	15.09,	2.25,	750.97,	541.62,	121.84,	37.62,	378.25,	15.13,	31.16,	12.96,	2.2,	41.19,	11.18,	19.91,	32.63,	4.63,	3.03,	183.52,	238.31,	4.26,	90.08,	10.03,	304.05,	1.9,	160.62]
+    let a = [2.32,	0.92,	28.63,	15.09,	2.25,	750.97,	541.62,	121.84,	37.62,	378.25,	15.13,	31.16,	12.96,	2.2,	41.19,	11.18,	19.91,	32.63,	4.63,	3.03,	183.52,	238.31,	4.26,	90.08,	10.03,	304.05,	1.9,	160.62]
 
     var T=a[Number(sIc)];
 
@@ -172,6 +174,78 @@ function btnClick3()
     for (let i = 1; i <= k2; i++) {
         txtk = txtk + "<p>Тариф за " + String(i) + " месяц: "+ number_format(T*k0*k1*5.89511, 2, ',', ' ')+"</p>"
     }
-    document.getElementById("resultk2").innerHTML="<p>Тариф по месяцам:</p>"+txtk
+    document.getElementById("resultk2").innerHTML="<p>Тариф по месяцам:</p>"+txtk;
 
+}
+function btnaddToLst() {
+
+    var stcond = document.getElementById("r3").style.display;
+    if (stcond == "none") {
+        document.getElementById("r3").style.display="block";
+    }
+    var sI01=document.Test2.Item.selectedIndex;
+    var sI02=document.Test2.Item.options[sI01].text;
+    // вставляем строку данных (div)
+    var divRow = document.createElement("div");
+    // ищем элемент, после которого надо вставить строку
+    var divContainer = document.getElementById("papa");
+    var lastDiv = divContainer.lastChild;
+    divContainer.insertBefore(divRow, lastDiv.nextSibling)
+    divRow.className="row";
+    divRow.id="r"+String(xx.length+3);
+
+    xx.push({
+        0: sI02,
+        1: document.getElementById("v1").innerHTML,
+        2: document.getElementById("result1").innerHTML,
+        3: document.getElementById("r0").innerHTML,
+        4: "5 895,11 руб/тонна",
+        5: document.getElementById("result2").innerHTML
+    });
+    //вставляем div-колонки
+    for (i=0; i<6; i++){
+        var divCol = document.createElement("div");
+        if (divRow.lastChild !== null) {
+            divRow.insertBefore(divCol, divRow.lastChild.nextSibling);
+        } else {
+            divRow.insertBefore(divCol, divRow.lastChild);
+        }
+
+        divCol.className="col mb-3";
+        divCol.id=divRow.id+"i"+String(i);
+        divCol.innerHTML=xx[xx.length-1][i];
+    }
+
+
+    /*
+<div class="row" id="r4"  style="display: none">
+        <div class="col mb-3 text-center" id="i1">
+        Категория организации
+    </div>
+    <div class="col mb-3 text-center" id="i2">
+        Количество единиц
+    </div>
+    <div class="col mb-3 text-center" id="i3">
+        Масса ТКО в месяц, тонн
+    </div>
+    <div class="col mb-3 text-center" id="i4">
+        Норматив накопления ТКО
+    </div>
+    <div class="col mb-3 text-center" id="i5">
+        Тариф
+        </div>
+        <div class="col mb-3 text-center" id="i6">
+        Платеж в месяц
+    </div>
+    var stcond = document.getElementById("r3").style.display;
+
+    if (stcond == "none") {
+        document.getElementById("r3").style.display="block";
+        document.getElementById("r3").scrollIntoView(true);
+    }
+    else {
+        document.getElementById("r3").style.display="none";
+    }
+     */
+    document.getElementById("r3").scrollIntoView(true);
 }

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+	
+	
+<script src="count.js"></script>
+
+<title>Калькулятор ТКО</title>
+</head>
+  <body>
+	  
+<div class="container" id="papa">
+    <div class="py-5 text-center">
+      <h2>Калькулятор ТКО</h2>
+      <p class="lead">В настоящее время расчет представлен по Тюменской области</p>
+    </div>
+    <form name="Test2">
+    <div class="row" id="r1">
+      <div class="col-md-12 mb-3">
+        <h4 class="mb-3 text-center">Расчет для юридических лиц</h4>
+        <div class="mb-3">
+          <label>Категория организации</label>
+          <SELECT class="form-control" NAME="Item" SIZE=5 onchange="listClck();">
+            <option value="1">Административные, офисные учреждения</option>
+            <option value="2">Магазин непродовольственных товаров </option>
+            <option value="3">Магазины, за исключением магазинов непродовольственных товаров</option>
+            <option value="4">Нестационарные торговые объекты</option>
+            <option value="5">Рынки промтоварные, торговые центры</option>
+            <option value="6">Автомастерские, шиномонтажные мастерские, станции технического обслуживания</option>
+            <option value="7">Автозаправочные станции</option>
+            <option value="8">Автотранспортные предприятия</option>
+            <option value="9">Гаражи, парковки закрытого типа, автостоянки</option>
+            <option value="10">Автомойки</option>
+            <option value="11">Железнодорожные и автовокзалы, аэропорты, речные порты</option>
+            <option value="12">Дошкольное образовательное учреждение</option>
+            <option value="13">Общеобразовательное учреждение</option>
+            <option value="14">Иные учреждения, осуществляющие образовательный процесс</option>
+            <option value="15">Клубы, кинотеатры, дома и дворцы культуры</option>
+            <option value="16">Театры, цирки, концертные залы</option>
+            <option value="17">Библиотеки</option>
+            <option value="18">Архивы</option>
+            <option value="19">Выставочные залы, музеи</option>
+            <option value="20">Спортивные клубы, центры, комплексы</option>
+            <option value="21">Предприятия общественного питания стационарные </option>
+            <option value="22">Предприятия общественного питания нестационарные </option>
+            <option value="23">Мастерские и ателье</option>
+            <option value="24">Парикмахерские, косметические салоны, салоны красоты</option>
+            <option value="25">Гостиницы (коллективные средства размещения), расположенные в многоквартирных домах </option>
+            <option value="26">Гостиницы, пансионаты, дома отдыха, туристические базы, за исключением гостиниц, расположенных в многоквартирных домах</option>
+            <option value="27">Кладбища</option>
+            <option value="28">Садоводческие некоммерческие товарищества</option>
+          </SELECT>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="r2">
+      <div class="col-md-6 mb-3" id="norm_col">
+        <h5 class="mb-3 text-center">Расчет по нормативам накопления ТКО</h5>
+        <div class="mb-3">
+          <label id="label1">Укажите...</label>
+          <input  type="number" class="form-control mb-3" name="v1" id="v1" placeholder="" value="">
+          <div class="mb-3 text-center"><INPUT class="btn btn-success" name="btn1" TYPE="button" VALUE="Рассчитать платеж" onClick="btnClick2();"></div>
+          <div class="mb-3 text-center"><INPUT class="btn btn-warning" name="btn1" TYPE="button" VALUE="Добавить в список" onClick="btnaddToLst();"></div>
+        </div>
+        <div class="mb-3">
+          <div class="mb-3" id="r0">Норматив накопления ТКО: кг/год на единицу</div>
+          <div class="mb-3" id="norm">Тариф: 5 895,11 руб/тонна</div>
+          <div class="mb-3" id="result1">Масса ТКО в месяц: тонн</div>
+          <div class="mb-3" id="result2">Платеж в месяц: руб</div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3" id="cont_col">
+        <h5 class="mb-3 text-center">Расчет по количеству и объему контейнеров</h5>
+        <div class="mb-3">
+          <label id="label-k1">Количество контейнеров</label>
+          <input  type="number" class="form-control mb-3" name="k1" placeholder="" value="" step="1">
+          <label id="label-k2">Объем контейнера, м<sup>3</sup></label>
+          <input  type="number" class="form-control mb-3" name="k2" placeholder="" value="">
+          <label id="label-k3">Периодичность вывоза (в месяц)</label>
+          <input  type="number" class="form-control mb-3" name="k3" placeholder="" value="">
+          <div class="mb-3 text-center"><INPUT class="btn btn-success" name="btn3" TYPE="button" VALUE="Рассчитать платеж" onClick="btnClick3();"></div>
+        </div>
+        <div class="mb-3">
+          <div class="mb-3" id="rk1">Норматив накопления ТКО: кг/год на единицу:</div>
+          <div class="mb-3" id="rk2">Норматив накопления ТКО: м<sup>3</sup>/год на единицу</div>
+          <div class="mb-3" id="rk3">Плотность ТКО, кг/м<sup>3</sup>:</div>
+          <div class="mb-3" id="rk4">Тариф регоператора: 5 895,11 руб/тонна</div>
+          <div class="mb-3" id="rk5">Объем ТКО в месяц: м<sup>3</sup></div>
+          <div class="mb-3" id="rk6">Масса ТКО в месяц: тонн</div>
+          <div class="mb-3" id="rk7">Платеж в месяц: руб</div>
+        </div>
+      </div>
+    </div>
+    </form>
+    <div class="row" id="r3" style="display: none">
+        <div class="col mb-3 text-center" style="background-color: #EEBB8A">
+          Категория организации
+        </div>
+        <div class="col mb-3 text-center" style="background-color: #EEBB8A">
+          Количество единиц
+        </div>
+        <div class="col mb-3 text-center" style="background-color: #EEBB8A">
+          Масса ТКО в месяц, тонн
+        </div>
+        <div class="col mb-3 text-center" style="background-color: #EEBB8A">
+          Норматив накопления ТКО
+        </div>
+        <div class="col mb-3 text-center" style="background-color: #EEBB8A">
+          Тариф
+        </div>
+        <div class="col mb-3 text-center" style="background-color: #EEBB8A">
+          Платеж в месяц
+        </div>
+
+    </div>
+
+
+  </div>
+
+
+
+</div>
+
+
+  </body>
+</html>
