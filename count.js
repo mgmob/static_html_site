@@ -130,7 +130,7 @@ function btnClick3()
 
 }
 function btnaddToLst() {
-    var mUnit = ["м<sup>3</sup>",
+    var mUnit = ["м<sup>2</sup>",
         "м<sup>2</sup>",
         "м<sup>2</sup>",
         "м<sup>2</sup>",
