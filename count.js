@@ -65,7 +65,7 @@ function listClck(){
         case 23: document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:"; break;
         case 24: document.getElementById("label1").innerHTML="Укажите количество мест:"; break;
         case 25: document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:"; break;
-        case 26: document.getElementById("label1").innerHTML="Укажите общую площадь, м<sup>2</sup>:"; break;
+        case 26: document.getElementById("label1").innerHTML="Укажите количество мест:"; break;
         case 27: document.getElementById("label1").innerHTML="Укажите количество мест:"; break;
         case 28: document.getElementById("label1").innerHTML="Укажите количество участников:"; break;
 
