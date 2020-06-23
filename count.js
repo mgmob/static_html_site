@@ -87,10 +87,11 @@ function btnClick2()
     document.getElementById("result1").innerHTML="Масса ТКО в месяц: "+number_format(((T/12)*i0)/1000,2,',',' ')+" тонн";
     document.getElementById("result2").innerHTML="<p>Платеж в месяц: "+number_format(((T/12)*i0)/1000*5895.11,2,',',' ')+" руб</p>"
     lastOrgPay = ((T/12)*i0)/1000*5895.11;
-    var stcond1 = document.getElementById("btn1").style.display;
+    document.getElementById("btnAdd").disabled=false;
+  /*  var stcond1 = document.getElementById("btn1").style.display;
     if (stcond1 == "none") {
         document.getElementById("btn1").style.display=null;
-    }
+    }*/
 }
 
 function btnClick3()
