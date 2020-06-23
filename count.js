@@ -153,9 +153,13 @@ function btnaddToLst() {
         "мест",
         "мест",
         "участников"]
-    var stcond = document.getElementById("r3").style.display;
-    if (stcond == "none") {
+    var stcond1 = document.getElementById("r3").style.display;
+    if (stcond1 == "none") {
         document.getElementById("r3").style.display=null;
+    }
+    var stcond2 = document.getElementById("r2.9").style.display;
+    if (stcond2 == "none") {
+        document.getElementById("r2.9").style.display=null;
     }
     var sI01=document.Test2.Item.selectedIndex;
     var sI02=document.Test2.Item.options[sI01].text;
